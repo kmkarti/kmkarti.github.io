@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Modal window(video-autoplay)</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../assets/css/bootstrap.css" rel="stylesheet">
+</head>
+  <body>   
+	  <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+			<button type="button" id="stop" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title" id="myModalLabel" style="text-align: center;">Crazy monkey</h4>
+          </div>
+          <div class="modal-body">
+			<video style="height:100%; width:100%;" id="video" src="../assets/videos/crazy-monkey.mp4" controls></video>
+			<hr>
+            </div>
+		</div>
+     </div>
+     </div>	 
+	 <div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-12">
+				<h1 class="text-center">How to earn money online?</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-12">
+				<p class="text-center">
+					<a title="Click to proceed!" id="link" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Give me all your money</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="../assets/js/bootstrap.js"></script>
+	<!-- Simple function only for button click --><script>
+	var v = document.getElementById("video");
+	var l = document.getElementById("link");
+	l.onclick = function() {
+    v.play();
+	v.currentTime = 0
+	};		
+	</script>
+	<!-- Function for both button click and close
+	<script>
+	var v = document.getElementById("video");
+	var l = document.getElementById("link");
+	var s = document.getElementById("stop");
+    l.onclick = function() {
+    v.play();	
+	};	
+	s.onclick = function() {
+	v.pause();
+	v.currentTime = 0;
+	};	
+	</script> 
+	-->
+  </body>
+</html>
